@@ -3,7 +3,7 @@ require_relative './scripts/cocoapods_utils'
 
 package = JSON.parse(File.read(File.join(__dir__, "package.json")))
 
-$config = find_config()
+$config = fast_squircle_find_config()
 version_flags = "-DREACT_NATIVE_MINOR_VERSION=#{$config[:react_native_minor_version]}"
 
 Pod::Spec.new do |s|
